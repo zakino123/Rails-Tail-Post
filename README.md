@@ -107,3 +107,7 @@
 ・fs.writeFileの使い方。Node.jsでファイルを書き込み
 
   https://photo-tea.com/p/17/fs-write-nodejs/
+
+・docker-compose 下で rails new して Rails6.1+deviseを試す | 北山淳也 | zenn
+
+  https://zenn.dev/junki555/articles/83339b5d58f416
