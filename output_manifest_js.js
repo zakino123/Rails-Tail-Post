@@ -20,6 +20,7 @@ const N = 6;
 // Check args
 function showUsageAndExit() {
   // process.argvはコマンドライン引数を受け取る
+  // path.basename: ディレクトリのパスを取り除いたファイル名。拡張子抜きの場合は、第2引数に拡張子を指定する
   const basename = path.basename(process.argv[1]);
   console.error(`Usage: node ${basename} <target directory path> <optionla:ignore path> <optional:manifest.json path>`);
   // Nodeのスクリプトで正常に処理を終了
@@ -49,7 +50,7 @@ const getFiles = (dirpath, callback) => {
         continue;
       } else {
         // crypto.randomFillSync:暗号強度の強い乱数値を取得します。
-        // Unit8Array:型付き配列で、 8 ビット符号なし整数値の配列を表します。
+        // Unit8Array:型付き配列で、8ビット符号なし整数値の配列を表します。
         cacheBustringString = Array.from(crypto.randomFillSync(new Uint8Array(N))).map((n)=>S[n%S.length]).join('');
         // replace(対象の文字、置換する文字):対象の文字を置換する文字に置換する。
         outputObject[dirent.name] = `${fp.replace(ignorePath, '')}?v=${cacheBustringString}`;
