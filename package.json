@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "__comments": [
+    "rimraf:ディレクトリ削除",
+    "postcss:cssツールを作るためのフレームワーク",
+    "autoprefixer:対応したいブラウザを指定すれば、必要なベンダプレフィックスを自動で付けてくれるツール",
+    "ベンダープレフィックス:CSSの新しいプロパティに付けて、記述したプロパティが拡張機能であることを、各ブラウザに示すために使われる識別子",
+    "postcss-cli:CSSを変換できるツール「PostCSS」をコマンドから利用できるパッケージ",
+    "postcss-import:複数のファイルを1つに結合するためのモジュール",
+    "yarn-run-all:yarn-scriptsを順次・並列実行できるツール"
+],
+  "scripts": {
+    "cleancss": "rimraf ./public/packs/css/",
+    "postcss": "postcss ./app/assets/stylesheets/**/*.css -d ./public/packs/css/",
+    "output_manifest": "node output_manifest_js.js public"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.4",
+    "rimraf": "^3.0.2",
+    "postcss": "^8.1.14",
+    "postcss-cli": "^8.3.0",
+    "postcss-import": "^13.0.0",
+    "postcss-nested": "^5.0.2",
+    "tailwindcss": "^2.0.1",
+    "yarn-run-all": "^3.1.1"
+  }
+}
